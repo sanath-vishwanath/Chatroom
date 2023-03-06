@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <title>Ninja Chat</title>
+</head>
+
+<body>
+    <main class="main">
+        <h1 class="h1">Ninja Chat</h1>
+        <div class="chat-rooms">
+            <div class="h2">Choose a chatroom:</div>
+            <div class="buttons">
+                <button class="btn" id="general">#general</button>
+                <button class="btn" id="gaming">#gaming</button>
+                <button class="btn" id="music">#music</button>
+                <button class="btn" id="ninjas">#ninjas</button>
+            </div>
+        </div>
+        <div class="chat-window">
+            <ul class="chat-list"></ul>
+        </div>
+        <form class="new-message form">
+            <div class="prepend">Your message:</div>
+            <input type="text" id="message" class="form-input" required>
+            <button type="submit" class="btn append">send</button>
+        </form>
+        <form class="new-name form">
+            <div class="prepend">Update name:</div>
+            <input type="text" id="name" class="form-input" required>
+            <button type="submit" class="btn append">update</button>
+        </form>
+        <div class="update-msg"></div>
+    </main>
+
+
+    <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+    <script>
+        // Initialize Firebase
+        const config = {
+            apiKey: "AIzaSyBw6CafmAE87-FeE_OJIbNKUlM5ppImI7k",
+            authDomain: "practice-project-a0b7b.firebaseapp.com",
+            projectId: "practice-project-a0b7b",
+            storageBucket: "practice-project-a0b7b.appspot.com",
+            messagingSenderId: "39056856500",
+            appId: "1:39056856500:web:ae269e7f1cd65118eccee1"
+        };
+        firebase.initializeApp(config);
+        const db = firebase.firestore();
+    </script>
+    <script src="js/chat.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

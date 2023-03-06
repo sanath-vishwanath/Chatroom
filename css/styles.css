@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-grey: #999;
+  --btn-cyan: #43d9be;
+  --text-default: #212529;
+  --btn-grey: #e9ecef;
+  --btn-font-grey: #495057;
+}
+
+html,
+body {
+  font-size: 62.5%;
+  font-family: system-ui;
+  width: 100%;
+  color: var(--text-default);
+}
+
+.h1 {
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.h2 {
+  font-size: 1.6rem;
+}
+
+.main {
+  text-align: center;
+  width: min(570px, 90vw);
+  margin: 2rem auto;
+}
+
+.chat-rooms {
+  margin-top: 2.3rem;
+}
+
+.buttons {
+  margin-top: 0.8rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.btn {
+  font-size: 1.6rem;
+  background-color: var(--btn-cyan);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.6em;
+  transition: color 0.15s ease-in-out;
+  letter-spacing: 1.0px;
+}
+
+.btn:hover {
+  color: var(--text-default);
+  cursor: pointer;
+}
+
+.chat-window {
+  margin: 1.8rem 0;
+}
+
+.chat-list {
+  list-style: none;
+}
+
+.chat {
+  text-align: start;
+  padding: 1.3rem 1.75rem;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-bottom: none;
+}
+
+/* To prevent border stacking */
+.chat:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.username {
+  font-weight: bold;
+}
+
+.time {
+  color: var(--font-grey);
+  font-size: 1rem;
+}
+
+.form {
+  display: flex;
+  font-size: 1.6rem;
+  margin-bottom: 1.8rem;
+}
+
+.prepend {
+  color: var(--btn-font-grey);
+  background-color: var(--btn-grey);
+  padding: 0.6em;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.form-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(80, 186, 205, 0.4);
+}
+
+.form-input {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-left: none;
+  border-right: none;
+  z-index: 1;
+  flex-grow: 1;
+  padding: 0rem 1rem;
+  color: var(--btn-font-grey);
+  font-size: inherit;
+  letter-spacing: 0.8px;
+}
+
+.append {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.update-msg {
+  margin-top: 0.8rem;
+  font-size: 1.7rem;
+}
